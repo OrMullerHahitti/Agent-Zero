@@ -38,7 +38,9 @@ Agent Zero creates a network of specialized AI agents, each focusing on specific
         └──────────────┘ └──────────────┘ └──────────────┘
 ```
 
-## 🚀 Quick Start
+## 🚀 Quick Start 
+> NOTE - right now only the skeleton is initialized , it should technichly work with my PropFlow package when will run it
+> right not its here to show the main structure and idea (i.e the System Design), the instructions are for future use 
 
 ### Installation
 
@@ -263,11 +265,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙋 Support
-
-- **Documentation**: See [CLAUDE.md](CLAUDE.md) for detailed technical documentation
-- **Issues**: Report bugs and request features via GitHub Issues
-- **Examples**: Check the `examples/` directory for usage patterns
 
 ## 🔗 Related Projects
 
