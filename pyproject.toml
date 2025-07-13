@@ -1,0 +1,87 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "agent-zero"
+version = "0.1.0"
+description = "Distributed agentic AI system for algorithmic problem-solving"
+readme = "README.md"
+authors = [{name = "Or Muller"}]
+license = {text = "MIT"}
+requires-python = ">=3.10"
+keywords = [
+    "multi-agent",
+    "distributed-ai", 
+    "algorithmic-problem-solving",
+    "orchestration",
+    "small-language-models",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License", 
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11", 
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# Runtime dependencies
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn>=0.24.0",
+    "pydantic>=2.5.0",
+    "asyncio-mqtt>=0.13.0",
+    "redis>=5.0.0",
+    "httpx>=0.25.0",
+    "python-multipart>=0.0.6",
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0.0",
+    "networkx>=3.2.0",
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+# Development extras
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "mypy>=1.7.0",
+    "black>=23.11.0",
+    "pylint>=3.0.0",
+    "pre-commit>=3.5.0",
+]
+
+# PropFlow integration
+propflow = [
+    "propflow @ file:///mnt/c/users/ormul/PycharmProjects/Belief-Propagation-Simulator",
+]
+
+[project.scripts]
+agent-zero = "agent_zero.cli:main"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --cov=src/agent_zero --cov-report=html"
