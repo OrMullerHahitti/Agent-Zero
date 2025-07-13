@@ -38,7 +38,9 @@ Agent Zero creates a network of specialized AI agents, each focusing on specific
         └──────────────┘ └──────────────┘ └──────────────┘
 ```
 
-## 🚀 Quick Start
+## 🚀 Quick Start 
+> NOTE - right now only the skeleton is initialized , it should technichly work with my PropFlow package when will run it
+> right not its here to show the main structure and idea (i.e the System Design), the instructions are for future use 
 
 ### Installation
 
